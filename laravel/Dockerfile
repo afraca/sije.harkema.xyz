@@ -1,0 +1,38 @@
+# Adapted from these sources:
+# - https://www.digitalocean.com/community/tutorials/how-to-install-and-set-up-laravel-with-docker-compose-on-ubuntu-22-04#step-3-setting-up-the-application-s-dockerfile
+# - https://caddy.community/t/example-docker-laravel/8700
+
+FROM php:8.2-fpm
+
+# Arguments defined in docker-compose.yml
+# ARG user
+# ARG uid
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip
+
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+# Get latest Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Create system user to run Composer and Artisan Commands
+RUN useradd -G www-data,root -u 1000 -d /home/sije sije
+RUN mkdir -p /home/sije/.composer && \
+    chown -R sije:sije /home/sije
+
+# Set working directory
+WORKDIR /srv
+
+# USER $user

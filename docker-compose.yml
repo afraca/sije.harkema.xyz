@@ -1,0 +1,56 @@
+version: "3.7"
+services:
+
+  caddy:
+    image: caddy
+    # restart: unless-stopped
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./laravel:/srv
+    ports:
+      - "80:80"
+      # - "443:443"
+    depends_on:
+      - app
+    networks:
+      - sije.harkema.xyz
+
+  app:
+    build:
+      context: ./laravel
+      dockerfile: Dockerfile
+      args:
+        user: sije
+        uid: 1000
+    # image: sije.harkema.xyz
+    # container_name: sije.harkema.xyz-app
+    networks:
+      - sije.harkema.xyz
+    # restart: unless-stopped
+    working_dir: /srv
+    volumes:
+      - ./laravel:/srv
+    ports:
+      - "9000:9000"
+  db:
+    image: mysql:8.1
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+    # container_name: travellist-db
+    # restart: unless-stopped
+    networks:
+      - sije.harkema.xyz
+
+networks:
+  sije.harkema.xyz:
+    driver: bridge
+
+
+volumes:
+  caddy_data:
+  caddy_config:
