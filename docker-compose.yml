@@ -17,6 +17,8 @@ services:
     networks:
       - sije.harkema.xyz
 
+# Unfortunately this still needs a
+# chmod -R g+w .
   app:
     build:
       context: ./laravel
