@@ -5,8 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/laravel/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/laravel/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/laravel/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/laravel/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/laravel/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/laravel/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/laravel/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/laravel/tests/Unit" isTestSource="true" />
@@ -33,8 +31,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/pint" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/prompts" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/sail" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/serializable-closure" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/league/commonmark" />
@@ -118,7 +114,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/symfony/translation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/symfony/uid" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/symfony/var-dumper" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/vlucas/phpdotenv" />
@@ -130,7 +125,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel/storage/app" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/storage/debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/storage/framework" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/_laravel_idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
