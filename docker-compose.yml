@@ -36,17 +36,12 @@ services:
       - ./laravel:/srv
     ports:
       - "9000:9000"
-  db:
-    image: mysql:8.1
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: example
 
-    # container_name: travellist-db
-    # restart: unless-stopped
+  redis:
+    image: redis:7.2-alpine
     networks:
       - sije.harkema.xyz
+
 
 networks:
   sije.harkema.xyz:
