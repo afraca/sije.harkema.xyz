@@ -125,6 +125,7 @@
       <path value="$PROJECT_DIR$/laravel/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/laravel/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/laravel/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/laravel/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

@@ -127,6 +127,10 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel/storage/app" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel/storage/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel/storage/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel/vendor/_laravel_idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
